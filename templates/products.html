@@ -1,12 +1,68 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Books | Nariman Complex Bookshop</title>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+    <style>
+        body {
+            overflow-y: auto;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
-    Our Products
+    <div class="bg-container"></div>
+
+    <a href="/" class="nav-link">&larr; Back to Home</a>
+
+    <div class="products-container">
+        <h2
+            style="text-align: center; font-size: 3rem; margin-bottom: 3rem; background: linear-gradient(to right, #fff, var(--primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+            Curated Collection</h2>
+
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=800"
+                    alt="Mindset" class="product-image">
+                <div class="product-info">
+                    <h3>Mindset Matters</h3>
+                    <p>Unlock your potential with this deep dive into the psychology of success. A must-read for
+                        entrepreneurs and dreamers.</p>
+                    <div class="price">$24.99</div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800"
+                    alt="The Great Gatsby" class="product-image">
+                <div class="product-info">
+                    <h3>Classic Literature</h3>
+                    <p>Experience the timeless tales of the jazz age. A beautiful hardcover edition perfect for any
+                        collection.</p>
+                    <div class="price">$19.99</div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=800"
+                    alt="Creative Studio" class="product-image">
+                <div class="product-info">
+                    <h3>Creative Design</h3>
+                    <p>Discover the secrets of world-class designers and learn how to apply aesthetic principles to your
+                        own work.</p>
+                    <div class="price">$29.50</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

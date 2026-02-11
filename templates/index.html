@@ -1,9 +1,95 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nariman Complex Bookshop | Welcome</title>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
 </head>
+
 <body>
-    hello word
+    <div class="bg-container"></div>
+
+    <ul class="circles">
+        <li style="left: 25%; width: 80px; height: 80px; animation-delay: 0s;"></li>
+        <li style="left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s;"></li>
+        <li style="left: 70%; width: 20px; height: 20px; animation-delay: 4s;"></li>
+        <li style="left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s;"></li>
+        <li style="left: 65%; width: 20px; height: 20px; animation-delay: 0s;"></li>
+        <li style="left: 75%; width: 110px; height: 110px; animation-delay: 3s;"></li>
+        <li style="left: 35%; width: 150px; height: 150px; animation-delay: 7s;"></li>
+        <li style="left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s;"></li>
+        <li style="left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s;"></li>
+        <li style="left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s;"></li>
+    </ul>
+
+    <section class="hero">
+        <div class="glass-card">
+            <h1>Nariman Complex Bookshop</h1>
+            <p class="subtitle">Elevate your mind. Discover your next adventure.</p>
+            <button id="getStartedBtn" class="btn">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div id="regModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Create Account</h2>
+            <p>Join the Nariman Complex Bookshop community</p>
+
+            <form id="regForm" method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" name="first_name" placeholder="Enter first name" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" placeholder="Enter last name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="example@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-btn">Register Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('regModal');
+        const btn = document.getElementById('getStartedBtn');
+        const closeBtn = document.querySelector('.close-btn');
+
+        // Open modal
+        btn.onclick = () => {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        };
+
+        // Close modal
+        closeBtn.onclick = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        // Close on outside click
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+        // Form submission logic is handled by Django POST
+    </script>
 </body>
+
 </html>
