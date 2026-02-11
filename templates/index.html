@@ -25,11 +25,25 @@
         <li style="left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s;"></li>
     </ul>
 
+    <nav style="position: absolute; top: 2rem; right: 2rem; z-index: 10;">
+        <a href="/products/"
+            style="color: white; text-decoration: none; margin-left: 2rem; font-weight: 500; opacity: 0.8; transition: opacity 0.3s;"
+            onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Store</a>
+        <a href="/blog/"
+            style="color: white; text-decoration: none; margin-left: 2rem; font-weight: 500; opacity: 0.8; transition: opacity 0.3s;"
+            onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Academic Insights</a>
+    </nav>
+
     <section class="hero">
         <div class="glass-card">
             <h1>Nariman Complex Bookshop</h1>
             <p class="subtitle">Elevate your mind. Discover your next adventure.</p>
-            <button id="getStartedBtn" class="btn">Get Started</button>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button id="getStartedBtn" class="btn">Get Started</button>
+                <a href="/blog/" class="btn"
+                    style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2);">Read
+                    Blog</a>
+            </div>
         </div>
     </section>
 
@@ -58,7 +72,7 @@
                     <label>Password</label>
                     <input type="password" name="password" placeholder="••••••••" required>
                 </div>
-                <button type="submit" class="submit-btn">Register Now</button>
+                <button type="submit" class="submit-btn" id="finalRegBtn">Register Now</button>
             </form>
         </div>
     </div>
@@ -68,10 +82,10 @@
         const btn = document.getElementById('getStartedBtn');
         const closeBtn = document.querySelector('.close-btn');
 
-        // Open modal
+        // Open modal (Simplified: Always show form)
         btn.onclick = () => {
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scroll
+            document.body.style.overflow = 'hidden';
         };
 
         // Close modal

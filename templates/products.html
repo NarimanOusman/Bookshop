@@ -18,7 +18,7 @@
 <body>
     <div class="bg-container"></div>
 
-    <a href="/" class="nav-link">&larr; Back to Home</a>
+    <a href="{% url 'home' %}" class="nav-link">&larr; Back to Home</a>
 
     <div class="products-container">
         <h2
@@ -26,75 +26,75 @@
             Curated Collection</h2>
 
         <div class="products-grid">
-            <!-- Product 1 -->
+            <!-- Product 1 (Engineering) -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=800"
-                    alt="Mindset" class="product-image">
+                <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&q=80&w=800"
+                    alt="Mechanical Engineering" class="product-image">
                 <div class="product-info">
-                    <h3>Mindset Matters</h3>
-                    <p>Unlock your potential with this deep dive into the psychology of success. A must-read for
-                        entrepreneurs and dreamers.</p>
-                    <div class="price">$24.99</div>
+                    <h3>Principles of Engineering</h3>
+                    <p>A deep dive into structural mechanics, thermodynamics, and design principles. Essential for
+                        aspiring engineers.</p>
+                    <div class="price">$55.00</div>
                 </div>
             </div>
 
-            <!-- Product 2 -->
+            <!-- Product 2 (Mathematics) -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800"
-                    alt="The Great Gatsby" class="product-image">
+                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800"
+                    alt="Calculus" class="product-image">
                 <div class="product-info">
-                    <h3>Classic Literature</h3>
-                    <p>Experience the timeless tales of the jazz age. A beautiful hardcover edition perfect for any
-                        collection.</p>
-                    <div class="price">$19.99</div>
+                    <h3>Advanced Calculus</h3>
+                    <p>Master complex mathematical functions and theories with this comprehensive guide to differential
+                        and integral calculus.</p>
+                    <div class="price">$42.00</div>
                 </div>
             </div>
 
-            <!-- Product 3 -->
+            <!-- Product 3 (Medical) -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=800"
-                    alt="Creative Studio" class="product-image">
+                <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=800"
+                    alt="Medical Biology" class="product-image">
                 <div class="product-info">
-                    <h3>Creative Design</h3>
-                    <p>Discover the secrets of world-class designers and learn how to apply aesthetic principles to your
-                        own work.</p>
-                    <div class="price">$29.50</div>
+                    <h3>Human Anatomy & Physiology</h3>
+                    <p>An illustrated exploration of the human body's intricate systems. Perfect for medical students
+                        and health professionals.</p>
+                    <div class="price">$120.00</div>
                 </div>
             </div>
 
-            <!-- Product 4 (Academic) -->
+            <!-- Product 4 (Drafting) -->
             <div class="product-card" style="border-color: rgba(99, 102, 241, 0.3);">
-                <img src="https://images.unsplash.com/photo-1532153322651-14f88fc39b97?auto=format&fit=crop&q=80&w=800"
-                    alt="Advanced Physics" class="product-image">
+                <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?auto=format&fit=crop&q=80&w=800"
+                    alt="Drafting Set" class="product-image">
                 <div class="product-info">
-                    <h3>Advanced Physics</h3>
-                    <p>A comprehensive guide to quantum mechanics and relativity. Ideal for university students and
-                        researchers.</p>
-                    <div class="price">$89.99</div>
+                    <h3>Professional Drafting Set</h3>
+                    <p>High-precision tools for architecture and technical drawing. Includes compasses, protractors, and
+                        professional pens.</p>
+                    <div class="price">$35.00</div>
                 </div>
             </div>
 
-            <!-- Product 5 (Academic) -->
+            <!-- Product 5 (Chemistry) -->
             <div class="product-card" style="border-color: rgba(99, 102, 241, 0.3);">
-                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800"
+                <img src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?auto=format&fit=crop&q=80&w=800"
                     alt="Organic Chemistry" class="product-image">
                 <div class="product-info">
                     <h3>Organic Chemistry</h3>
-                    <p>Master the complexities of molecular structures and reactions with this essential academic
-                        masterpiece.</p>
+                    <p>Solve complex molecular puzzles with this gold-standard textbook on organic structures and
+                        chemical reactions.</p>
                     <div class="price">$75.00</div>
                 </div>
             </div>
 
-            <!-- Product 6 (Academic) -->
+            <!-- Product 6 (Library Stacks) -->
             <div class="product-card" style="border-color: rgba(99, 102, 241, 0.3);">
-                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=800"
-                    alt="World History" class="product-image">
+                <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&q=80&w=800"
+                    alt="Encyclopedia" class="product-image">
                 <div class="product-info">
-                    <h3>World History Vol. II</h3>
-                    <p>An in-depth exploration of global civilizations and their evolution through the ages. Updated
-                        for 2024.</p>
-                    <div class="price">$45.00</div>
+                    <h3>General Science Encyclopedia</h3>
+                    <p>A massive collection of scientific knowledge ranging from astronomy to zoology. Built for the
+                        curious academic mind.</p>
+                    <div class="price">$65.00</div>
                 </div>
             </div>
         </div>
