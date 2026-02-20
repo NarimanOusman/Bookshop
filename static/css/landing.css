@@ -17,10 +17,12 @@
 body {
     font-family: 'Outfit', sans-serif;
     color: var(--text-light);
-    overflow: hidden;
-    height: 100vh;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     background: var(--bg-dark);
 }
